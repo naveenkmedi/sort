@@ -1,4 +1,4 @@
-//gives the floor of a number(where to insert) in a sorted non-repeating array
+//gives the first occurance of a number in a sorted non-repeating array
 #include <iostream>
 
 using namespace std;
@@ -9,9 +9,7 @@ int search(int num, int min, int max, int arr[])
 	int mid = (min + max)/2;
 	if(min >= max)
 	{
-		if(num < arr[0])
 			return -1;
-		return min+1;
 	}
 	if(num < arr[mid])
 	{
@@ -24,7 +22,10 @@ int search(int num, int min, int max, int arr[])
 	}
 	if(num == arr[mid])
 	{
-		return mid;
+		if(num > arr[mid-1])
+			return mid;
+		else
+			return search(num, min, mid-1, arr);
 	}
 }
 
@@ -38,8 +39,9 @@ int main(int argc, char* argv[])
 {
 	int arr[10] = {0};
 	for(int i = 0; i < 10; i++){arr[i] = 10*i;}
-	// arr[2] = 10;
-	//  arr[3] = 10; arr[4] = 20;
+	arr[2] = 10;
+	 // arr[3] = 10; 
+	 // arr[4] = 10;
 
 	for(int i = 0; i < 10; i++){cout<<arr[i]<<"\t";}
 

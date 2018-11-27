@@ -1,3 +1,4 @@
+//binary search
 #include <stdio.h>
 
 int search(int arr[], int item, int low, int high)
@@ -26,7 +27,7 @@ int main()
 	int low = 0; int high = 9;
 	int ip[10] = {10,9,8,7,6,5,4,3,2,1};
 
-	int item = -15;
+	int item = 5;
 	int pos = search(ip, item, low, high);
 
 	printf("%d\n", pos+1);
