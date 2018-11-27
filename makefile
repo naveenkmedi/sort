@@ -6,3 +6,4 @@ $build:
 	gcc src/insertion.c -o i.elf
 	gcc src/mergeS.c -o m.elf
 	gcc src/sort.c -o s.elf
+	g++ src/find_.cpp -o f_.elf
