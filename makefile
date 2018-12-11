@@ -8,3 +8,4 @@ $build:
 	# gcc src/sort.c -o s.elf
 	# g++ src/find_.cpp -o f_.elf
 	g++ src/firstR_.cpp -o fr.elf
+	g++ src/quick.cpp -o q.elf
