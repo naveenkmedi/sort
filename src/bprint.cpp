@@ -14,22 +14,11 @@ void printTree(bTree* head)
 	if(head != NULL)
 	{
 		// usleep(100000);
-		cout<<head->data<<" ";
 		printTree(head->left);
+		cout<<head->data<<" ";
 		printTree(head->right);
 	}
 }
-
-void verticalPrint(bTree* head)
-{
-	if(head != NULL)
-	{
-		verticalPrint(head->left);
-		cout<<head->data<<" ";
-		verticalPrint(head->right);
-	}
-}
-
 
 int main()
 {
@@ -41,13 +30,13 @@ int main()
 	bTree* node5 = new bTree();
 	bTree* node6 = new bTree();
 
-	head->data = 5;
+	head->data = 6;
 	node1->data = 10;
-	node2->data = 20;
+	node2->data = 25;
 	node3->data = 30;
-	node4->data = 40;
+	node4->data = 45;
 	node5->data = 50;
-	node6->data = 60;
+	node6->data = 65;
 
 	head->left = node1;
 	head->right = node2;
@@ -67,9 +56,6 @@ int main()
 	node6->right = NULL;
 
 	printTree(head);
-	cout<<"\n";
-
-	verticalPrint(head);
 	cout<<"\n";
 
 	return 0;
