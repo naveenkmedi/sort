@@ -1,5 +1,6 @@
 $build:
-	g++ src/bTree.cpp -o t.elf
+	g++ src/maxDiff.cpp -o m.elf
+	# g++ src/bTree.cpp -o t.elf
 	# g++ src/wait.cpp -o w.elf
 	# g++ src/bin.cpp -o b.elf
 	# g++ src/floor.cpp -o f.elf
