@@ -20,6 +20,16 @@ void printTree(bTree* head)
 	}
 }
 
+void printRight(bTree* head)
+{
+	if(head != NULL)
+	{
+		printTree(head->left);
+		cout<<head->data<<" ";
+		printTree(head->right);
+	}
+}
+
 int main()
 {
 	bTree* head = new bTree();
@@ -56,6 +66,9 @@ int main()
 	node6->right = NULL;
 
 	printTree(head);
+	cout<<"\n";
+
+	printRight(head);
 	cout<<"\n";
 
 	return 0;
