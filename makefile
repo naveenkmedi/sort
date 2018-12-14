@@ -1,5 +1,7 @@
 $build:
-	g++ src/maxDiff.cpp -o m.elf
+	g++ src/sortlink.cpp -o d.elf
+	# g++ src/delLinked.cpp -o d.elf
+	# g++ src/maxDiff.cpp -o m.elf
 	# g++ src/bTree.cpp -o t.elf
 	# g++ src/wait.cpp -o w.elf
 	# g++ src/bin.cpp -o b.elf
