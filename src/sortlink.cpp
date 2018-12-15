@@ -17,36 +17,36 @@ void recPrint(node* node)
 	}
 }
 
-node*	insertNum(node* head, int num)
+node* insertNum(node* head, int num)
 {
 	node* pos = new node();
 	pos->data = num;
-	if(head == NULL)
+
+
+
+	node* curr = head, *prev = NULL;
+
+	while(curr != NULL)
 	{
-		pos->next = NULL;
-		return pos;
-	}
-	else
-	{
-		node* curr = head;
-		while(curr->next != NULL)
+		if(num < curr->data)
 		{
-			if(num <= curr->next->data)
+			if(curr == head)
 			{
-				pos->next = curr->next;
-				curr->next = pos;
-				return head;
-			}
-			else
-			{
-				curr = curr->next;
-			}
+				pos->next = head;
+				return pos;
+			}		
+			pos->next = prev->next;
+			prev->next = pos;
+			return head;
 		}
-		curr->next = pos;
-		pos-> next = NULL;
-		return head;
+		prev = curr;
+		curr= curr->next;
 	}
+	prev->next = pos;
+	pos->next = NULL;
+	return head;
 } 
+
 
 int main()
 {
@@ -82,8 +82,11 @@ int main()
 	recPrint(head);
 	cout<<endl;
 
-	insertNum(head, 5);
+	head = insertNum(head, 5);
+	recPrint(head);
+	cout<<endl;
 
+	head = insertNum(head, 73);
 	recPrint(head);
 	cout<<endl;
 
