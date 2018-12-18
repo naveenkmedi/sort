@@ -1,5 +1,8 @@
 $build:
-	g++ src/sortlink.cpp -o d.elf
+	g++ src/cloneTree.cpp -o c.elf
+	# g++ src/treeHeight.cpp -o t.elf
+	# g++ src/balanceTree.cpp -o b.elf
+	# g++ src/sortlink.cpp -o d.elf
 	# g++ src/delLinked.cpp -o d.elf
 	# g++ src/maxDiff.cpp -o m.elf
 	# g++ src/bTree.cpp -o t.elf
